@@ -6,12 +6,16 @@ var special = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '='];
 
 var password = "";
 
+function onlyNumbers(str) {
+  return /^[0-9]+$/.test(str);
+}
+
 function generatePassword() {
 
   password = "";
 
   var passwordLength = prompt("Choose a password length between 8 - 128");
-  if (!passwordLength || passwordLength < 8 || passwordLength > 128) {
+  if (passwordLength < 8 || passwordLength > 128 || !onlyNumbers(passwordLength)) {
     alert("Incorrect Selection");
   } else {
 
