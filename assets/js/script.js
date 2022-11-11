@@ -40,7 +40,7 @@ function generatePassword() {
           }
           password = password.concat(num[Math.floor(Math.random() * num.length)]); //add a number
           break;
-        case 2: /if 2, check to see if special characters were seleceted, and add the appropriate character
+        case 2: //if 2, check to see if special characters were seleceted, and add the appropriate character
           if (!useSpecial) {
             password = password.concat(alphabet[Math.floor(Math.random() * alphabet.length)]); //if !useSpecial, add a lowercase letter instead
             break;
