@@ -1,13 +1,13 @@
-var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']; //array containing characters of the alphabet
 
-var num = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+var num = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']; //array containing 0-9
 
-var special = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '='];
+var special = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '=']; //array containing a selection of Special Characters
 
-var password = "";
+var password = ""; //initializing the password variable
 
 function onlyNumbers(str) {
-  return /^[0-9]+$/.test(str);
+  return /^[0-9]+$/.test(str); //this checks the pop-up box input for numbers only on the if statement on line 18
 }
 
 function generatePassword() {
@@ -28,7 +28,7 @@ function generatePassword() {
     var charOptions = 4; //one of the 3 extra options will be randomly selected as the next character of the password or will default to another letter if the chosen option is not included in the password.
 
 
-    for (var i = 0; i < passwordLength; i++) {
+    for (var i = 0; i < passwordLength; i++) { 
       switch (Math.floor(Math.random() * charOptions)) {
         case 0:
           password = password.concat(alphabet[Math.floor(Math.random() * alphabet.length)]);
